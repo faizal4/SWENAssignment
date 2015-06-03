@@ -1,0 +1,202 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4AE66615-A126-438A-AD18-B43015FA72C8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HMSSystem</RootNamespace>
+    <AssemblyName>HMSSystem</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ClosedXML">
+      <HintPath>..\packages\ClosedXML.0.76.0\lib\net40-client\ClosedXML.dll</HintPath>
+    </Reference>
+    <Reference Include="DocumentFormat.OpenXml, Version=2.5.5631.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\openxml.sdk.25.1.0.0\lib\DocumentFormat.OpenXml.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BCnUDatabase.cs" />
+    <Compile Include="BookingCnU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookingCnU.Designer.cs">
+      <DependentUpon>BookingCnU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BookingRnD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BookingRnD.Designer.cs">
+      <DependentUpon>BookingRnD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GuestCnU.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GuestCnU.Designer.cs">
+      <DependentUpon>GuestCnU.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GuestRnD.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GuestRnD.Designer.cs">
+      <DependentUpon>GuestRnD.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HKDatabase.cs" />
+    <Compile Include="HKDate.cs" />
+    <Compile Include="HKJobs.cs" />
+    <Compile Include="HMS.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HMS.Designer.cs">
+      <DependentUpon>HMS.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Housekeeping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Housekeeping.Designer.cs">
+      <DependentUpon>Housekeeping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RBDatabase.cs" />
+    <Compile Include="RBDate.cs" />
+    <Compile Include="RBInformation.cs" />
+    <Compile Include="RoomBooking.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RoomBooking.Designer.cs">
+      <DependentUpon>RoomBooking.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RoomOccupancy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RoomOccupancy.Designer.cs">
+      <DependentUpon>RoomOccupancy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RODatabase.cs" />
+    <Compile Include="RODate.cs" />
+    <Compile Include="RoomOccupant.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RoomOccupant.Designer.cs">
+      <DependentUpon>RoomOccupant.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RoomStatus.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RoomStatus.Designer.cs">
+      <DependentUpon>RoomStatus.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ROStatsYear.cs" />
+    <Compile Include="ROStatsMonth.cs" />
+    <Compile Include="ROStatsWeek.cs" />
+    <Compile Include="ROTDatabase.cs" />
+    <Compile Include="ROTOccupant.cs" />
+    <Compile Include="RSDatabase.cs" />
+    <Compile Include="RSRoom.cs" />
+    <EmbeddedResource Include="BookingCnU.resx">
+      <DependentUpon>BookingCnU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BookingRnD.resx">
+      <DependentUpon>BookingRnD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GuestCnU.resx">
+      <DependentUpon>GuestCnU.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GuestRnD.resx">
+      <DependentUpon>GuestRnD.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HMS.resx">
+      <DependentUpon>HMS.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Housekeeping.resx">
+      <DependentUpon>Housekeeping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="RoomBooking.resx">
+      <DependentUpon>RoomBooking.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoomOccupancy.resx">
+      <DependentUpon>RoomOccupancy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoomOccupant.resx">
+      <DependentUpon>RoomOccupant.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoomStatus.resx">
+      <DependentUpon>RoomStatus.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
